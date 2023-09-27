@@ -1,0 +1,45 @@
+.calculator{
+
+    background-color: red;
+    margin: auto;
+    width: auto;
+}
+
+@media (min-width: 720px){
+    .calculator{
+        width: 50%;
+    }
+}
+
+.screen{
+    margin: 2em auto 2em;
+    background-color: white;
+    border: 1px black;
+    text-align: right;
+    width: 60%;
+    
+}
+
+.screen-lb-1{
+
+    margin: 1em;
+}
+
+.screen-lb-2{
+
+    height: 100%;
+    margin: 1em;
+}
+
+.numbers{
+    text-align: center;
+}
+
+.buttons{
+
+    background-color: yellow;
+    margin: 1.5em auto;
+    padding: 1em;
+    width: 50%;
+    
+}
