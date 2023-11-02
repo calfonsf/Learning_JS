@@ -1,17 +1,13 @@
-const {app, BrowserWindow} = require('electron');
-const url = require('url');
-
-function boot() {
-
-    win = new BrowserWindow()
-    /* win.loadURL(url.format({
-        pathname: 'index.html',
-        slashes: true
-
-    })) */
-
-    win.loadURL('./index.html')
-
+const { app, BrowserWindow } = require('electron')
+const createWindow = () => {
+    const win = new BrowserWindow({
+      width: 800,
+      height: 600
+    })
+  
+    win.loadFile('index.html')
 }
 
-app.on('ready', boot);
+app.whenReady().then(() => {
+    createWindow()
+})
