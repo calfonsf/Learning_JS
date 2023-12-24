@@ -1,13 +1,14 @@
 <script>
     let tasks = [];
 
+    let newtask = "";
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        const newtask = event.target.newTask.value;
 
         if (newtask) {
-            tasks.push(newtask)
-            tasks = tasks
+            tasks.push(newtask);
+            tasks = tasks;
         } else {
             console.log("Empty Task");
         }
@@ -17,7 +18,7 @@
 <main>
     <h1>TODO List</h1>
     <form on:submit={handleSubmit}>
-        <input type="text" placeholder="New Task" name="newTask" />
+        <input type="text" placeholder="New Task" bind:value={newtask} />
         <input type="submit" />
     </form>
 
