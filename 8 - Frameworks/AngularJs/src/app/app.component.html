@@ -1,0 +1,11 @@
+<h1>TODO List</h1>
+
+<form (submit)="handleSubmit()">
+  <input name="newtask" type="text" placeholder="New Task" [(ngModel)]="newtask">
+  <input type="Submit">
+</form>
+
+<h2>Task List</h2>
+<app-task-list [tasklist] = "tasks"></app-task-list>
+
+<router-outlet></router-outlet>
