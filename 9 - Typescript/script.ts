@@ -42,10 +42,10 @@ type Hero = {
     name: string;
     age: number;
     isActive?: boolean;
-    greet?: () => void
+    greet?: () => void;
 };
 
-const myhero: Hero = { name: "Thor", age: 30, id: '2-2-2-2-2' };
+const myhero: Hero = { name: "Thor", age: 30, id: "2-2-2-2-2" };
 
 // optional chaining
 myhero.isActive?.valueOf;
@@ -99,30 +99,29 @@ if (canvas instanceof HTMLCanvasElement) {
 // Interface
 
 interface PersonaInterface {
-    name: string,
-    age: number
+    name: string;
+    age: number;
 }
 
 interface Wizard extends PersonaInterface {
-    house: `${string}-${string}`
-    patronus?: string 
+    house: `${string}-${string}`;
+    patronus?: string;
 }
 
 const Hermione: Wizard = {
-    name: 'Hermione Granger',
+    name: "Hermione Granger",
     age: 11,
-    house: 'Griffindors-House'
-}
-
+    house: "Griffindors-House",
+};
 
 const Harry: Wizard = {
-    name: 'Hermione Granger',
+    name: "Hermione Granger",
     age: 11,
-    house: 'Griffindors-House',
-    patronus: 'deer'
-}
+    house: "Griffindors-House",
+    patronus: "deer",
+};
 
 // Type guard
-function isWizard(persona: Persona): persona is Wizard{
-    return (persona as Wizard).house !== undefined
+function isWizard(persona: Persona): persona is Wizard {
+    return (persona as Wizard).house !== undefined;
 }
